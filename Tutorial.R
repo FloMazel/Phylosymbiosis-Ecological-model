@@ -9,6 +9,8 @@ library(parallel)
 library(geiger)
 library(abind)
 library(vegan)
+library(phytools)
+library(GUniFrac)
 
 #-------------------#
 #-------------------#
