@@ -1,33 +1,45 @@
-# Sim
+## Sim
 
-### i: refers to the i-th line of the "params" (see below) matrix that is used to run simulations 
+#### i: refers to the i-th line of the "params" (see below) matrix that is used to run simulations 
 
-### params: matrix that contains the simulation parameters; the matrix column names should contains:
+#### params: matrix that contains the simulation parameters; the matrix column names should contains:
 
- ##### rep:              
- N_hosts:          
- N_symbionts
- "Ntraits"          "Breath"          
- [7] "beta.comp"        "beta.abun"        "beta.env"         "years"            "K"                "V_delta_host"    
-[13] "V_delta_symbiont"
+#### parameters associated with the overall simulaiton
 
+###### rep: the number of simulation you want to run    
+###### N_hosts: number of host species (only one microbiome by host)          
+###### N_symbionts: number of microbial units (e.g. "species", OTUs, ESVs)
+###### Ntraits: number of host traits used to fiulter microbiomes   
 
-OverallSImuls
+#### parameters associated with trait distribution of host and microbes 
 
-range02 <- function(x,newMax,newMin)# to make comaprable host trait and microbe preferences
+###### V_delta_host: Delta parameter (sensu Pagel 1999) used to simulate host traits along host phylogeny 
+###### V_delta_symbiont: Delta parameter (sensu Pagel 1999) used to simulate microbial traits along microbial phylogeny 
 
-shuffleTips=function(x,tree)
+Pagel M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877-884
+delta is a time-dependent model of trait evolution (Pagel 1999). The delta model is similar to ACDC insofar as the delta model fits the relative contributions of early versus late evolution in the tree to the covariance of species trait values. Where delta is greater than 1, recent evolution has been relatively fast; if delta is less than 1, recent evolution has been comparatively slow. Intrepreted as a tree transformation, the model raises all node depths to an estimated power (delta). 
+
+#### parameters associated with the ecological model of microbiome assembly (see Münkemüller & Gallien, 2015)
+
+Münkemüller T, Gallien L. 2015. VirtualCom: a simulation model for eco-evolutionary community assembly and invasion. Methods Ecol Evol 6:735–743.
+
+###### Breath: value of standard deviation of the Gaussian distributions that describe the microbial niches (identical for all species)
+###### beta.comp: value of the strength of the competition filter (see details)
+###### beta.abun: value of the strength of the competition filter (see details)
+###### beta.env: value of the strength of the environmental filter (see details)
+###### years: number of simulated time-steps;
+###### K: value of carrying capacity, i.e. number of microbe individuals in the microbial community                
+
+Community assembly is simulated by asynchroneous updating of K individuals per year. For each update a random individual is removed and replaced by an individual from the species pool. The choice of that individual follows a multinomial distribution, with probabilities being driven by an environmental filter, a competition filter and a recruitment filter.
 
 
 RFmeasures
 
+
 Phylosymbiosis=function(OTUtable,HostTree,SymbiontTree,TraitDist=NA)
 
 
-rescaleTree=function(Tree)
 
-
-phylosigM=function(tree, x)
 
 
 Simuls=function(paramVirt,NoCores=3)
