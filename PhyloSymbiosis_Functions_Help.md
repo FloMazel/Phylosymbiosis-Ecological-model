@@ -1,18 +1,18 @@
 # Function _Sim_
 
-## **Description:** 
+**Description:** 
 
-## **Input:**
+**Input:** The function take a set of input simulation parameters 
 
-## **Output:** The function take a set of input simulation parameters 
+**Output:** 
 
-## **Parameters:**  
+**Parameters:**  
 
-### i: refers to the i-th line of the "params" (see below) matrix that is used to run simulations 
+     - i: refers to the i-th line of the "params" (see below) matrix that is used to run simulations 
 
-### params: matrix that contains the simulation parameters; the matrix column names should contains:
+     - params: matrix that contains the simulation parameters; the matrix column names should contains:
 
-#### 1. Parameters associated with the overall simulaiton
+#### 1. Parameters associated with the overall simulation
 
 ###### rep: the number of simulation you want to run    
 ###### N_hosts: number of host species (only one microbiome by host)          
