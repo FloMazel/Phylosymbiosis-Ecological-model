@@ -29,8 +29,6 @@ RFmeasures=function(HostTree,SymbiontDendro,nRandom=100)
   randomSymbiontDendro=rmtree(N=nRandom,n=length(tips),tip.label = tips)
   rd=sapply(1:nRandom,FUN=function(x){multiRF(HostTree,randomSymbiontDendro[[x]])})
   
-  #null=sapply(1:nRandom,FUN=function(x){RF.dist(HostTree,nullSymbiontDendro[[x]],normalize = T)})
-
   pval=sum(obs>null)/(nRandom+1)
   pvalRd=sum(obs>rd)/(nRandom+1)
   
@@ -148,7 +146,7 @@ Simuls=function(paramVirt,NoCores=3)
   SymbiontTrait=sim.char(nsim=paramVirt[['Ntraits']],par=1,phy=rescale(SymbiontTree,model="delta",paramVirt[['V_delta_symbiont']]))[,,1]  # Evolve Symbiont Traits 
   if (paramVirt[['Ntraits']]>1){SymbiontTrait=sim.char(nsim=paramVirt[['Ntraits']],par=1,phy=rescale(SymbiontTree,model="delta",paramVirt[['V_delta_symbiont']]))[,1,]}  # Evolve Symbiont Traits 
   
-  if (paramVirt[['Ntraits']]==1){SymbiontTrait=range02(SymbiontTrait,newMax = max(HostTrait),newMin = min(HostTrait))   } # RESCALING to make sure that Host Traits and Symbionts matches?
+  if (paramVirt[['Ntraits']]==1){SymbiontTrait=range02(SymbiontTrait,newMax = max(HostTrait),newMin = min(HostTrait))   } # RESCALING to make sure that Host Traits and Symbionts Traits match
   if (paramVirt[['Ntraits']]>1) {for (i in 1:paramVirt[['Ntraits']]){ SymbiontTrait[,i]=range02(SymbiontTrait[,i],newMax = max(HostTrait[,i]),newMin = min(HostTrait[,i]))  }}
   
   SymbiontBlomK=phylosigM(SymbiontTree,SymbiontTrait)   #Measure Phylosignal

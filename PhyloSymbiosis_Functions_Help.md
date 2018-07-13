@@ -1,6 +1,6 @@
 ### Function _Sim_
 
-**Description:** The function use simulation parameters input to (1) assemble microbiome across host species and (2) measure phylosymbiosis patterns using various approaches 
+**Description:** The function uses simulation parameters input to (1) assemble microbiome across host species and (2) measures phylosymbiosis patterns using various approaches 
 
 **Input parameters:**  
 
@@ -20,11 +20,11 @@
      - years: number of simulated time-steps;
      - K: value of carrying capacity, i.e. number of microbe individuals in the microbial community                
 
-**Output:** The function returns a list of results corresponding to each line of the "param" input paramter. For each of these independant simulations, the function returns a list with thwo elements  outputs:  
+**Output:** The function returns a list of results corresponding to each line of the "param" input parameter. For each of these independant simulations, the function returns a list with the two elements  outputs:  
 
   - First element: an array summarizing phylosymbiosis statistics (statistic and associated [p-value]) for four diversity metrics (Unifrac, Weighted Unifrac, Bray Curtis and Jaccard) and four approaches: 
-       - _RF_: Dendogram-nased method (RF metric compared to model null 1, where tip labels are shuffled)
-       - _RFrd_: Dendogram-nased method (RF metric compared to model null 2. where tree are re-simulated)
+       - _RF_: Dendogram-based method (RF metric compared to model null 1, where tip labels are shuffled)
+       - _RFrd_: Dendogram-based method (RF metric compared to model null 2. where tree are re-simulated)
        - _Mantel_: Mantel method (Mantel test between host phylogenetic distances and microbial beta-diversity; statistic is Speraman Rho)
        - _ MantelTraits_: Mantel method (Mantel test between host trait distances and microbial beta-diversity; statistic is Speraman Rho)
 
@@ -75,12 +75,13 @@ Pagel M. 1999. Inferring the historical patterns of biological evolution. Nature
   - TraitDist: ahost trait distance matrix 
 
 
-**Output:** An array summarizing phylosymbiosis statistics (statistic and associated [p-value]) for four diversity metrics (Unifrac, Weighted Unifrac, Bray Curtis and Jaccard) and four approaches: 
+**Output:** An array summarizing phylosymbiosis statistics (statistic and associated p-value) for four diversity metrics (Unifrac, Weighted Unifrac, Bray Curtis and Jaccard) and four approaches
 
-       - _RF_: Dendogram-nased method (RF metric compared to model null 1, where tip labels are shuffled)
+
+    - _RF_: Dendogram-nased method (RF metric compared to model null 1, where tip labels are shuffled)
        
-       - _RFrd_: Dendogram-nased method (RF metric compared to model null 2. where tree are re-simulated)
+    - _RFrd_: Dendogram-nased method (RF metric compared to model null 2. where tree are re-simulated)
        
-       - _Mantel_: Mantel method (Mantel test between host phylogenetic distances and microbial beta-diversity; statistic is Speraman Rho)
+    - _Mantel_: Mantel method (Mantel test between host phylogenetic distances and microbial beta-diversity; statistic is Speraman Rho)
        
-       - _ MantelTraits_: Mantel method (Mantel test between host trait distances and microbial beta-diversity; statistic is Speraman Rho)
+    - _ MantelTraits_: Mantel method (Mantel test between host trait distances and microbial beta-diversity; statistic is Speraman Rho)
