@@ -1,17 +1,25 @@
-## Sim
+# Function "Sim""
 
-#### i: refers to the i-th line of the "params" (see below) matrix that is used to run simulations 
+## Description 
 
-#### params: matrix that contains the simulation parameters; the matrix column names should contains:
+## Input
 
-#### parameters associated with the overall simulaiton
+## Output The function take a set of input simulation parameters 
+
+## Parameters: 
+
+### i: refers to the i-th line of the "params" (see below) matrix that is used to run simulations 
+
+### params: matrix that contains the simulation parameters; the matrix column names should contains:
+
+#### 1. Parameters associated with the overall simulaiton
 
 ###### rep: the number of simulation you want to run    
 ###### N_hosts: number of host species (only one microbiome by host)          
 ###### N_symbionts: number of microbial units (e.g. "species", OTUs, ESVs)
 ###### Ntraits: number of host traits used to fiulter microbiomes   
 
-#### parameters associated with trait distribution of host and microbes 
+#### 2. Parameters associated with trait distribution of host and microbes 
 
 ###### V_delta_host: Delta parameter (sensu Pagel 1999) used to simulate host traits along host phylogeny 
 ###### V_delta_symbiont: Delta parameter (sensu Pagel 1999) used to simulate microbial traits along microbial phylogeny 
@@ -19,7 +27,7 @@
 Pagel M. 1999. Inferring the historical patterns of biological evolution. Nature 401:877-884
 delta is a time-dependent model of trait evolution (Pagel 1999). The delta model is similar to ACDC insofar as the delta model fits the relative contributions of early versus late evolution in the tree to the covariance of species trait values. Where delta is greater than 1, recent evolution has been relatively fast; if delta is less than 1, recent evolution has been comparatively slow. Intrepreted as a tree transformation, the model raises all node depths to an estimated power (delta). 
 
-#### parameters associated with the ecological model of microbiome assembly (see Münkemüller & Gallien, 2015)
+#### 3. Parameters associated with the ecological model of microbiome assembly (see Münkemüller & Gallien, 2015)
 
 Münkemüller T, Gallien L. 2015. VirtualCom: a simulation model for eco-evolutionary community assembly and invasion. Methods Ecol Evol 6:735–743.
 
