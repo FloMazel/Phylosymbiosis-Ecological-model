@@ -1,7 +1,7 @@
 ## Ecological model of phylosymbiosis
 
 
-### Code associated with the paper *Is host filtering the main driver of phylosymbiosis across the tree of life?* by _Florent Mazel, Katherine Davis, Andrew Loudon, Waldan Kwong, Mathieu Groussin_ and _Laura Wegener Parfrey_
+Code associated with the paper **Is host filtering the main driver of phylosymbiosis across the tree of life?** by Florent Mazel, Katherine Davis, Andrew Loudon, Waldan Kwong, Mathieu Groussin and Laura Wegener Parfrey
 
 
 This page provides the R functions necessary to reproduce the simulations presented in the paper as well as a short tutorial to guide the users to use our model. 

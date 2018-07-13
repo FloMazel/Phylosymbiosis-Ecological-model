@@ -1,12 +1,12 @@
-# Function "Sim""
+# Function _Sim_
 
-## Description 
+## **Description:** 
 
-## Input
+## **Input:**
 
-## Output The function take a set of input simulation parameters 
+## **Output:** The function take a set of input simulation parameters 
 
-## Parameters: 
+## **Parameters:**  
 
 ### i: refers to the i-th line of the "params" (see below) matrix that is used to run simulations 
 
